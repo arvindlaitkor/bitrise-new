@@ -1,0 +1,121 @@
+/**
+ * Styles of SignIn Component
+ */
+@import '../../shared/styles/variables';
+
+.signin {
+  font-family: 'Fira Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: $color-gray-dark-solid url('images/signin-bg.png') 50% 50% no-repeat;
+  background-size: cover;
+
+  &-topbar {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 66px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: $color-gray-dark-solid;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 253px;
+    height: 22px;
+    background: url('../../shared/icons/logo-demo-full.svg') 0 0 no-repeat;
+    background-size: 253px 22px;
+  }
+
+  &-form {
+    z-index: 1;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0 auto;
+    max-width: 480px;
+    font-size: 16px;
+    transform: translate(-50%, -50%);
+    animation: signin-on $animation-time-default;
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    input {
+      font: 20px 'Fira Sans', sans-serif;
+      display: block;
+      width: 100%;
+      height: 56px;
+      border-radius: 2px;
+      background-color: #fff;
+      margin-bottom: 20px;
+    }
+
+    button {
+      position: relative;
+      font: 16px 'Fira Sans', sans-serif;
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: 56px;
+      border-radius: 2px;
+      margin: 40px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $color-gray-dark;
+      background-color: $color-yellow;
+
+      &:disabled {
+        cursor: default;
+        color: $color-gray-light;
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  .loader {
+    transform: scale(0.7);
+    &-path { stroke: $color-gray-dark; }
+  }
+
+  &-message {
+    position: absolute;
+    animation: signin-message-on $animation-time-fast;
+  }
+}
+
+/**
+ * Animations of SignIn Component
+ */
+@keyframes signin-on {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes signin-message-on {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

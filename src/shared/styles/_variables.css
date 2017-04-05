@@ -1,0 +1,61 @@
+/**
+ * Colors
+ */
+$color-yellow: #fcda00;
+$color-yellow-light: #fffdf2;
+$color-blue: #007fe0;
+$color-green: #66bb6a;
+$color-red: #ff4040;
+
+$color-gray-dark: rgba(0, 0, 0, 0.8);
+$color-gray-dark-solid: #2a2a2a;
+$color-gray-light: rgba(0, 0, 0, 0.4);
+$color-gray-light-solid: #888;
+$color-gray-lighter: rgba(0, 0, 0, 0.11);
+$color-gray-lighter-solid: #eaeaea;
+
+$color-text-default: $color-gray-dark;
+$color-text-light: rgba(0, 0, 0, 0.6);
+$color-text-lighter: $color-gray-light;
+
+$color-selection-gray: rgba(0, 0, 0, 0.04);
+$color-fade: rgba(0, 0, 0, 0.21);
+$color-shadow: $color-gray-lighter;
+$color-border-dark: $color-gray-lighter;
+$color-border-light: rgba(255, 255, 255, 0.21);
+
+/**
+ * Font sizes
+ */
+$font-size-default: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-small: 12.6px;
+$font-size-smaller: 11px;
+$font-size-tiny: 9px;
+
+/**
+ * Font sizes
+ */
+$input-height: 40px;
+
+/**
+ * Time of animations
+ */
+$animation-time-default: 0.3s;
+$animation-time-fast: 0.15s;
+
+/**
+ * Main layout
+ */
+$content-max-width: 1310px;
+$content-mobile-width: 769px;
+$content-min-width: 320px;
+
+$form-max-width: 870px;
+
+/**
+ * Topbar
+ */
+$topbar-height: 64px;
+$topbar-height-mobile: 48px;

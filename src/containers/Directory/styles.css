@@ -1,0 +1,24 @@
+/**
+ * Styles of Directory Component
+ */
+@import '../../shared/styles/variables';
+
+.directory.demo-list {
+  width: 640px;
+
+  .demo-item {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/**
+ * Mobile styles of Directory Component
+ */
+@media (max-width: $content-mobile-width) {
+  .directory.demo-list {
+    padding: 58px 0;
+    width: calc(100% - 20px);
+  }
+}

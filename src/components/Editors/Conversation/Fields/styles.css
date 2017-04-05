@@ -1,0 +1,95 @@
+/**
+ * Styles of Conversation Fields Component
+ */
+@import '../../../../shared/styles/variables';
+
+.message-fields {
+  position: relative;
+
+  &.child {
+    padding-top: 44px;
+
+    .btn-remove {
+      top: 0;
+      right: -25px;
+    }
+  }
+
+  &-creator {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .input {
+      width: 100%;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      flex-flow: row nowrap;
+    }
+
+    label {
+      white-space: nowrap;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &-image {
+    display: flex;
+    flex-grow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    cursor: pointer;
+  }
+
+  &-image-label {
+    white-space: nowrap;
+    margin-right: 20px;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    font-weight: 300;
+    user-select: text;
+  }
+
+  &-image button {
+    cursor: pointer;
+    display: inline-block;
+    width: 84px;
+    height: 36px;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: $color-yellow;
+    &:hover { opacity: 0.8; }
+  }
+
+  .btn-save {
+    margin-bottom: 20px;
+  }
+}
+
+/**
+ * Mobile styles of Message Component
+ */
+@media (max-width: $content-mobile-width) {
+  .message-fields {
+    &-creator {
+      display: block;
+    }
+
+    &.child .btn-remove {
+      right: -15px;
+    }
+
+    &-image {
+      margin: 10px 0;
+    }
+
+    &-image button {
+      width: 62px;
+      height: 28px;
+      font-size: $font-size-small;
+    }
+  }
+}

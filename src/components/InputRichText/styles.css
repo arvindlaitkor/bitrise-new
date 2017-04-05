@@ -1,0 +1,38 @@
+/**
+ * Styles of Input RichText Component
+ */
+@import '../../shared/styles/variables';
+
+.input.rich-text {
+
+  textarea {
+    padding-bottom: 30px;
+  }
+
+  .input-counter {
+    right: 75px;
+    bottom: 15px;
+  }
+
+  .btn-emotion {
+    cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: 37px;
+    width: 32px;
+    height: 32px;
+    background: url('../../shared/icons/icn-emotion-dark.svg') 50% 50% no-repeat;
+    &:hover { opacity: 0.8; }
+  }
+
+  .btn-image {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    width: 32px;
+    height: 32px;
+    background: url('../../shared/icons/icn-text-image-dark.svg') 50% 50% no-repeat;
+    &:hover { opacity: 0.8; }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "logoImg": "images/brands/logo-crossfit-hq-dark.png",
+  "coverImg": "images/brands/cover-crossfit-hq.jpg",
+  "HQ_BASIC": {
+    "name": "Crossfit, Inc.",
+    "address1": "1250 Connecticut Avenue, N.W.",
+    "address2": "Suite 200",
+    "city": "Washington, D.C.",
+    "state": "Washington",
+    "country": "USA",
+    "zip": "20036",
+    "phone": "202-449-8533",
+    "web": "https://www.crossfit.com",
+    "facebook": "crossfit",
+    "twitter": "@crossfitgames",
+    "youtube": "CrossFitHQ",
+    "yelp": "",
+    "foursquare": "",
+    "instagram": "crossfit"
+  },
+  "ABOUT": {
+    "description": "CrossFit is a branded fitness regimen created by Greg Glassman",
+    "foundedYear": "2000"
+  },
+  "HQ_CHANNELS": {
+    "channel-1": {
+      "index": 1,
+      "name": "all-hands",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": "images/brands/cover-crossfit-hq.jpg"
+    },
+    "channel-2": {
+      "index": 2,
+      "name": "executives",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    },
+    "channel-3": {
+      "index": 3,
+      "name": "managers",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    },
+    "channel-4": {
+      "index": 4,
+      "name": "staff",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": "images/brands/cover-crossfit-hq.jpg"
+    },
+    "channel-5": {
+      "index": 5,
+      "name": "",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    },
+    "channel-6": {
+      "index": 6,
+      "name": "",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    },
+    "channel-7": {
+      "index": 7,
+      "name": "",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    },
+    "channel-8": {
+      "index": 8,
+      "name": "",
+      "description": "",
+      "availability": "",
+      "joinType": "",
+      "audienceNetworks": [],
+      "coverImg": ""
+    }
+  },
+  "URL": {
+    "url": "crossfit"
+  }
+}

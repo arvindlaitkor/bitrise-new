@@ -1,0 +1,20 @@
+# designs and stuff
+/etc
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+.eslintcache
+
+# lighthouse report
+*.report.html

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "96a020ebdbb2e465901a14f06e9e8dc7",
+    "create_at": 1467158400,
+    "update_at": 1487548800,
+    "delete_at": 0,
+    "display_name": "Crossfit, Inc.",
+    "name": "crossfit",
+    "logo_img": "images/brands/logo-crossfit-hq-dark.png",
+    "cover_img": "images/brands/cover-crossfit-hq.jpg",
+    "data_points": 35,
+    "data_points_total": 48,
+    "is_user_creator": true
+  },
+  {
+    "id": "a294afd22fd846793920647383e0892f",
+    "create_at": 1467158400,
+    "update_at": 1487548800,
+    "delete_at": 0,
+    "display_name": "Starbucks",
+    "name": "starbucks",
+    "logo_img": "images/brands/logo-starbucks-hq.png",
+    "cover_img": "images/brands/cover-starbucks-hq.jpg",
+    "data_points": 35,
+    "data_points_total": 48,
+    "is_user_creator": true
+  },
+  {
+    "id": "8fd848013803cdccb03e5131a9fd865e",
+    "create_at": 1467158400,
+    "update_at": 1487548800,
+    "delete_at": 0,
+    "display_name": "Applebee’s",
+    "name": "applebees",
+    "logo_img": "images/brands/logo-applebees-hq.png",
+    "cover_img": "images/brands/cover-applebees-hq.jpg",
+    "data_points": 23,
+    "data_points_total": 48,
+    "is_user_creator": false
+  },
+  {
+    "id": "8364725a79748979621c8ec8e994ad10",
+    "create_at": 1467158400,
+    "update_at": 1487548800,
+    "delete_at": 0,
+    "display_name": "Dunkin’ Donuts",
+    "name": "dunkindonuts",
+    "logo_img": "images/brands/logo-dunkindonuts-hq.png",
+    "cover_img": "",
+    "data_points": 22,
+    "data_points_total": 46,
+    "is_user_creator": false
+  }
+]

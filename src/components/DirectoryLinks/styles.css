@@ -1,0 +1,52 @@
+/**
+ * Styles of Directory Links Component
+ */
+@import '../../shared/styles/variables';
+
+.directory-links {
+  font-size: $font-size-default;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    font-size: $font-size-default;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin: 8px 20px 0 0;
+  }
+
+  a {
+    color: $color-blue;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+
+  a.inactive {
+    color: $color-text-lighter;
+    pointer-events: none;
+  }
+}
+
+/**
+ * Mobile Styles of Directory Links Component
+ */
+@media (max-width: $content-mobile-width) {
+  .directory-links {
+    font-size: $font-size-smaller;
+    margin: 20px 10px;
+
+    h3 {
+      font-size: $font-size-smaller;
+    }
+
+    li {
+      margin: 8px 10px 0 0;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+/**
+ * Styles of Dropdown Component
+ */
+@import '../../shared/styles/variables';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  &-label {
+    display: block;
+    height: 17px;
+    margin-bottom: 10px;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    font-weight: 300;
+    user-select: text;
+    white-space: nowrap;
+  }
+
+  &-button {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: $input-height;
+    padding: 0 20px 0 10px;
+    text-align: left;
+    font-size: $font-size-medium;
+    font-weight: 300;
+    background-color: #fff;
+    border: 1px solid $color-border-dark;
+
+    &::after {
+      content: '';
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 20px;
+      height: $input-height;
+      background: url('../../shared/icons/icn-arrow-down-dark.svg') 50% 50% no-repeat;
+    }
+  }
+
+  &.open &-button::after {
+    transform: rotate(180deg);
+  }
+
+  &-body {
+    width: 100%;
+    position: absolute;
+    max-height: 280px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px $color-shadow;
+    border: 1px solid $color-border-dark;
+    border-top: 0;
+    transform-origin: top;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    animation: dropdown-body $animation-time-fast;
+
+    &-item {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      height: $input-height;
+      padding: 0 10px;
+      text-align: left;
+      font-size: $font-size-medium;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-item:hover { background-color: $color-yellow; }
+  }
+
+  &.empty-button {
+    .dropdown-button { border: 0; }
+    .dropdown-button::after { display:none; }
+    .dropdown-body {
+      border-radius: 4px;
+      border: 1px solid $color-border-dark;
+      animation: dropdown-body-empty-button $animation-time-fast;
+    }
+  }
+}
+
+/**
+ * Mobile Styles of Dropdown Component
+ */
+@media (max-width: $content-mobile-width) {
+  .dropdown {
+    &-button { font-size: $font-size-default; }
+    &-body-item { font-size: $font-size-default; }
+  }
+}
+
+/**
+ * Animations of Dropdown Component
+ */
+@keyframes dropdown-body {
+  0% { transform: scaleY(0.9); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes dropdown-body-empty-button {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

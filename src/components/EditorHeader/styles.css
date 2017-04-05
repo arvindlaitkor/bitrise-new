@@ -1,0 +1,197 @@
+/**
+ * Styles of Editor Header Component
+ */
+@import '../../shared/styles/variables';
+
+.editor-header {
+  width: 100%;
+  position: relative;
+
+  &-cover {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 21%;
+    display: block;
+    min-height: 236px;
+    background-color: $color-gray-light-solid;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    &:hover div { opacity: 0.7; }
+  }
+
+  &-nav.fixed {
+    z-index: 600;
+    position: fixed;
+    width: auto;
+    top: 0;
+    right: 60px;
+    animation: navigation-on $animation-time-fast;
+
+    .btn {
+      margin: 12px 5px 0;
+    }
+  }
+
+  &-cover div {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    line-height: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: $font-size-medium;
+    color: rgba(255, 255, 255, 0.8);
+    background: url('../../shared/icons/icn-image-light.svg') 0 50% no-repeat;
+  }
+
+  &-logo {
+    cursor: pointer;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 6px solid #fff;
+    bottom: 0;
+    left: 30px;
+    background-color: $color-gray-dark-solid;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    &:hover div { opacity: 0.7; }
+    &.active { border-color: $color-yellow; }
+
+    &.added div {
+      transform: translateY(0);
+      top: auto;
+      bottom: 10px;
+      right: 10px;
+      padding: 0;
+      width: 20px;
+      height: 18px;
+    }
+    &.added span { display: none; }
+  }
+
+  &-logo div {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: $font-size-default;
+    color: rgba(255, 255, 255, 0.8);
+    background: url('../../shared/icons/icn-photo-light.svg') 50% 0 no-repeat;
+  }
+
+  &-btn-bar {
+    width: 100%;
+    height: 80px;
+    text-align: right;
+    background-color: #fff;
+
+    .btn-bar-container {
+      margin: 0 auto;
+      position: relative;
+      padding-right: 20px;
+      max-width: $content-max-width;
+    }
+  }
+
+  .btn {
+    font-weight: 600;
+    font-size: $font-size-medium;
+  }
+
+  .btn-next {
+    color: #fff;
+    background-color: $color-green;
+  }
+
+  .btn-back {
+    color: $color-gray-dark;
+    background-color: $color-yellow;
+  }
+}
+
+/**
+ * Mobile Styles of Editor Header Component
+ */
+@media (max-width: $content-mobile-width) {
+  .editor-header {
+
+    &-nav.fixed {
+      right: 44px;
+
+      .btn {
+        width: 60px;
+        margin: 10px 4px 0;
+      }
+    }
+
+    &-cover {
+      height: 24%;
+      min-height: 139px;
+    }
+
+    &-cover div {
+      font-size: $font-size-smaller;
+      background-size: 15px 15px;
+      height: 15px;
+      line-height: 15px;
+      padding-left: 25px;
+    }
+
+    &-logo {
+      width: 100px;
+      height: 100px;
+      border-width: 3px;
+      left: 15px;
+    }
+
+    &-logo div {
+      font-size: $font-size-tiny;
+      background-size: 15px 14px;
+      padding-top: 20px;
+    }
+
+    &-logo.added div {
+      right: 5px;
+      bottom: 5px;
+    }
+
+    &-btn-bar {
+      height: 50px;
+    }
+
+    .btn {
+      font-size: $font-size-small;
+      padding: 0 5px;
+    }
+
+    .btn-bar-container {
+      padding-right: 15px;
+    }
+  }
+}
+
+/**
+ * Animations of Editor Header Component
+ */
+@keyframes navigation-on {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

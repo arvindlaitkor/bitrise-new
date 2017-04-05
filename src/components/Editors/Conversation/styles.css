@@ -1,0 +1,35 @@
+/**
+ * Styles of Conversation Component
+ */
+@import '../../../shared/styles/variables';
+
+.conversation {
+  position: relative;
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+
+  .btn-remove {
+    margin: 5px 5px 0 0;
+  }
+
+  .btn-add-reply {
+    margin: 20px 0;
+  }
+
+  .replies {
+    padding-left: 30px;
+    background-color: $color-gray-lighter-solid;
+  }
+}
+
+
+/**
+ * Mobile Styles of Conversation Component
+ */
+@media (max-width: $content-mobile-width) {
+  .conversation {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+}

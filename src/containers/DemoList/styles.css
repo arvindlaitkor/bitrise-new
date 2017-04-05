@@ -1,0 +1,20 @@
+/**
+ * Styles of Demo List Component
+ */
+@import '../../shared/styles/variables';
+
+.demo-list {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  padding: 80px 0 0;
+}
+
+/**
+ * Mobile Styles Demo List Component
+ */
+@media (max-width: $content-mobile-width) {
+  .demo-list {
+    width: 100%;
+    padding: 48px 0;
+  }
+}

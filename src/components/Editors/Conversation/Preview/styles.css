@@ -1,0 +1,63 @@
+/**
+ * Styles of Conversation Preview Component
+ */
+@import '../../../../shared/styles/variables';
+
+.message-preview {
+  position: relative;
+  padding: 20px 0 20px 45px;
+  background-color: #fff;
+  border-bottom: 1px solid $color-gray-lighter-solid;
+
+  &.drag {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+    .message-preview-btn-edit { display: none; }
+  }
+
+  &.child {
+    padding-left: 65px;
+    border-left: 3px solid $color-yellow;
+    .message-preview-avatar { left: 20px; }
+  }
+
+  &-avatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: $color-gray-lighter-solid;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-btn-edit {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: $color-blue;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: $font-size-default;
+    &:hover { opacity: 0.8; }
+  }
+
+  &-name {
+    margin: 0;
+    font-weight: 600;
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: $font-size-default;
+  }
+
+  &-text {
+    margin-top: 15px;
+    color: $color-text-light;
+    font-weight: 300;
+    font-size: $font-size-default;
+  }
+}

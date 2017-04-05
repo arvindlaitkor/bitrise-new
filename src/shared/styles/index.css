@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'fonts';
+
+*,
+*::after,
+*::before {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  user-select: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font: $font-size-default 'ProximaNova', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  ::selection {
+    color: #000;
+    background-color: $color-yellow;
+  }
+}
+
+input,
+textarea,
+button {
+  box-shadow: none;
+  font: $font-size-default 'ProximaNova', sans-serif;
+}
+
+input,
+textarea {
+  font-weight: 300;
+  border: 1px solid $color-border-dark;
+  user-select: text;
+  padding: 0 10px;
+  font-size: $font-size-medium;
+  &:focus { border-color: $color-yellow; }
+}
+
+input {
+  height: $input-height;
+}

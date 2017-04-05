@@ -1,0 +1,100 @@
+/**
+ * Styles of Radio Group Component
+ */
+@import '../../shared/styles/variables';
+
+.radio-group {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+
+  &-label {
+    display: block;
+    margin-bottom: 10px;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    font-weight: 300;
+    user-select: text;
+  }
+
+  .radio {
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  &.inline {
+    display: flex;
+    flex-flow: row nowrap;
+    .radio-group-label { margin-right: auto;}
+
+    .radios {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    .radio { margin-right: 20px; }
+    .radio:last-child { margin-right: 0; }
+    label { font-size: $font-size-default; }
+  }
+
+  input {
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 7px 0 0;
+    display: none;
+    position: relative;
+  }
+
+  label {
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 20px;
+    color: $color-text-default;
+    font-size: $font-size-medium;
+    font-weight: 300;
+    user-select: text;
+  }
+
+  label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: 1px solid $color-gray-dark;
+  }
+
+  label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $color-gray-dark;
+    transform: scale(0);
+    transition: transform $animation-time-fast;
+  }
+
+  input:checked + label::after {
+    transform: scale(1);
+  }
+}
+
+/**
+ * Mobile Styles of Radio Group Component
+ */
+@media (max-width: $content-mobile-width) {
+  .radio-group {
+    &.inline {
+      display: block;
+      label { font-size: $font-size-small; }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * Styles of Input Field Component
+ */
+@import '../../shared/styles/variables';
+
+.input {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    height: 17px;
+    margin-bottom: 10px;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    font-weight: 300;
+    user-select: text;
+    .bold { font-weight: 600; }
+  }
+
+  label i {
+    margin-left: 5px;
+    color: $color-text-lighter;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    user-select: text;
+    background-color: #fff;
+    color: $color-text-default;
+    font-size: $font-size-medium;
+    font-weight: 300;
+  }
+
+  &.counter input,
+  &.counter textarea {
+    padding-right: 30px
+  }
+
+  textarea {
+    padding: 10px;
+    resize: none;
+  }
+
+  &-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: $font-size-default;
+    font-weight: 300;
+    color: $color-green;
+    &.red { color: $color-red; }
+  }
+}
+
+/**
+ * Mobile Styles of Input Field Component
+ */
+@media (max-width: $content-mobile-width) {
+  .input {
+    margin-bottom: 15px;
+
+    input,
+    textarea {
+      font-size: $font-size-default;
+    }
+  }
+}

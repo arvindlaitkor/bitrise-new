@@ -1,0 +1,65 @@
+/**
+ * Styles of URL Editor Component
+ */
+@import '../../../shared/styles/variables';
+
+.url-editor {
+  white-space: nowrap;
+  padding: 0 5px;
+
+  .input {
+    display: inline-block;
+    input { text-align: right; }
+  }
+
+  .domain {
+    display: inline-block;
+    font-size: $font-size-medium;
+    margin-left: 16px;
+  }
+
+  &-message {
+    margin-top: 5px;
+    position: absolute;
+    animation: message-on $animation-time-default both;
+  }
+
+  &-message.red {
+    color: $color-red;
+  }
+}
+
+/**
+ * Mobile styles of URL Editor Component
+ */
+@media (max-width: $content-mobile-width) {
+  .url-editor {
+    margin-top: 20px;
+
+    .input {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .domain {
+      font-size: $font-size-default;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+/**
+ * Animations of URL Editor Component
+ */
+@keyframes message-on {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,127 @@
+/**
+ * Styles of Input Suggest Component
+ */
+@import '../../shared/styles/variables';
+
+.input-suggest {
+  z-index: 5;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    height: 17px;
+    margin-bottom: 10px;
+    color: $color-text-default;
+    font-size: $font-size-default;
+    font-weight: 300;
+    user-select: text;
+    .bold { font-weight: 600; }
+  }
+
+  &-field {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $color-border-dark;
+    padding: 0 10px;
+    &.active { border-color: $color-yellow; }
+  }
+
+  &-tags {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    button {
+      position: relative;
+      cursor: pointer;
+      font-size: $font-size-default;
+      padding: 0 36px 0 10px;
+      margin: 0 10px 10px 0;
+      height: 26px;
+      line-height: 26px;
+      white-space: nowrap;
+      text-decoration: none;
+      background-color: $color-yellow;
+      animation: tag-on $animation-time-fast both;
+    }
+
+    button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 26px;
+      border: 1px solid $color-border-dark;
+      border-left: 0;
+      height: 100%;
+      background: #fff url('../../shared/icons/icn-close-dark.svg') 50% 50% no-repeat;
+      background-size: 10px 10px;
+    }
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    user-select: text;
+    color: $color-text-default;
+    font-size: $font-size-medium;
+    font-weight: 300;
+  }
+
+  &-dropdown {
+    width: 100%;
+    position: absolute;
+    max-height: 280px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px $color-shadow;
+    border: 1px solid $color-border-dark;
+    border-top: 0;
+    transform-origin: top;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    animation: dropdown-body $animation-time-fast;
+
+    button {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      height: $input-height;
+      padding: 0 10px;
+      text-align: left;
+      font-size: $font-size-medium;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    button:hover { background-color: $color-yellow; }
+    b { font-weight: 600; }
+
+    span {
+      font-weight: 300;
+      color: $color-text-light;
+    }
+  }
+}
+
+/**
+ * Animation of Input Suggest Component
+ */
+@keyframes tag-on {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,14 @@
+job1:
+  stage: build
+  only:
+    - master
+  tags:
+    - master
+  script:
+    - pwd
+    - hostname
+    - whoami
+    - export PATH=/home/gitlab-runner/.nvm/v6.9.5/bin:$PATH
+    - node --version
+    - BUILD_DIR=`pwd`
+    - sh /home/gitlab-runner/make-build-master.sh ${BUILD_DIR} ${CI_BUILD_REF}
