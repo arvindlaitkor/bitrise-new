@@ -16,7 +16,7 @@ Demo management (CMS) of Footprint messaging system. It uses React.js, Redux, Ba
 Run `npm start`. It runs the app in development mode on `localhost:8080` with hot loading. Also the app is available by IP address of the host with port 8080 from devices, connected to the current local network for testing on mobile devices.
 
 ## Test
-
+  ##
 * `npm run test` for tests.
 * `npm run test -- --watch` for running tests in watch mode.
 * `npm run test -- --coverage` for check test coverage.
